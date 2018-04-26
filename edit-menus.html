@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
+  <title>Edit-menus</title>
+  <link rel="stylesheet/less" type="text/css" href="common/style.less" />
+  <link rel="stylesheet/less" type="text/css" href="common/style-notice-board.less" />
+  <link rel="stylesheet/less" type="text/css" href="common/style-edit-menus.less" />
+  <!-- 부트스트랩 -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
+  <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+    <!-- less -->
+  <script src="js/jquery-1.12.2.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/less.min.js" type="text/javascript"></script>
+  <![endif]-->
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="/LG/img/LG-logo.png" alt="LG-Chem"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><span class="glyphicon glyphicon-user menu-icon" style="color:#b5b5b5;"></span></li>
+                <li><a href="#">Welcome</a></li>
+                <li><a href="#">관리자</a></li>
+            </ul>
+            <button type="submit" class="btn btn-log-out">Logout</button>
+        </div>
+    </div>
+</nav>
+<div class="masthead">
+    <nav>
+        <ul class="nav nav-justified">
+            <li><span></span></li>
+            <li><a href="/LG/main-contents.html"><span class="glyphicon glyphicon-th-large menu-icon"></span>메인관리</a></li>
+            <li class="active"><a href="/LG/notice-board.html"><span class="glyphicon glyphicon-comment menu-icon"></span>게시판관리</a></li>
+            <li><a href="/LG/views.html"><span class="glyphicon glyphicon-signal menu-icon"></span>조회수통계</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="container-fluid clearfix main-view">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+
+            <h2 class="row-main">게시판관리</h2>
+            <ul class="nav nav-sidebar">
+                <li class="active"><a href="#">CEO LOUNGE <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">NEWSROOM</a></li>
+                <li><a href="#">현장 이모저모</a></li>
+                <li><a href="#">케미토픽</a></li>
+                <li><a href="#">간격</a></li>
+                <li><a href="#">TGIM</a></li>
+                <li><a href="#">마이크로 러닝</a></li>
+                <li><a href="#">컬쳐 Chemp</a></li>
+                <li><a href="#">칭찬합시다</a></li>
+                <li><a href="#">서프라이즈 박스</a></li>
+                <li><a href="#">동상이몽</a></li>
+                <li><a href="#">이 달의 뉴페이스</a></li>
+                <li><a href="#">케미툰</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-md-10 main clearfix">
+            <div class="sub-header clearfix">
+                <h2 class="main-contents-topic">EDIT MENUS</h2>
+                <div class="navi">
+                    <ul>
+                        <li><span class="glyphicon glyphicon-home menu-icon" style="color:#b5b5b5;"></span><a href="#">Home</a></li>
+                        <li><span class="navi-arrow"></span><a href="#">게시판관리</a></li>
+                        <li><span class="navi-arrow"></span><a href="#" class="on-active">EDIT MENUS</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="jumbotron clearfix menu-to-edit">
+                <div class="menu-edit-box clearfix">
+                    <ul class="clearfix">
+                        <li>
+                            <span class="b_font">Select a menu to edit :</span>
+                        </li>
+                        <li>
+                            <select name="menu-select" id="menu-select" class="form-control menu-select-box">
+                                <option value="menu-select">메뉴테스트 (Social Links Menu, Top Menu)</option>
+                                <option value="menu-select">메뉴3</option>
+                                <option value="menu-select">주요메뉴</option>
+                            </select>
+                        </li>
+                        <li>
+                            <button type="submit" class="btn btn-default btn-select">Select</button>
+                        </li>
+                        <li>
+                            or <a href="#">create a new menu.</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="dropdown-area clearfix">
+                <div class="row-fluid clearfix">
+                    <div class="span3 leftbox">
+                        <ul>
+                            <li>
+                                <h3 class="add-menu">
+                                    <a href="#">Pages <span class="glyphicon glyphicon-chevron-up"></span></a>
+                                </h3>
+                                <div class="ans">
+                                    <div class="add-menu-list">
+                                        <div class="tab">
+                                            <nav>
+                                                <ul>
+                                                    <li data-content=".content1">Most Recent</li>
+                                                    <li data-content=".content2">View All</li>
+                                                    <li data-content=".content3">Search</li>
+                                                </ul>
+                                            </nav>
+                                            <div class="content">
+                                                <div class="content1">
+                                                    <form action="#">
+                                                        <ul>
+                                                            <li>
+                                                                <label class="check-box" for="check1">
+                                                                    <input type="checkbox" name="checkbox-all" id="check1" value="page-chk">pages1
+                                                                </label>
+                                                                <ul>
+                                                                    <li>
+                                                                        <label class="check-box" for="check-child">
+                                                                            <input type="checkbox" name="checkbox-all" id="check-child" value="page-chk">pages1-child
+                                                                        </label>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <label class="check-box" for="check2">
+                                                                    <input type="checkbox" name="checkbox-all" id="check2" value="page-chk">pages2
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="check-box" for="check3">
+                                                                    <input type="checkbox" name="checkbox-all" id="check3" value="page-chk">pages3
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="check-box" for="check4">
+                                                                    <input type="checkbox" name="checkbox-all" id="check4" value="page-chk">pages4
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="check-box" for="check5">
+                                                                    <input type="checkbox" name="checkbox-all" id="check5" value="page-chk">pages5
+                                                                </label>
+                                                            </li>
+                                                        </ul>
+                                                    </form>
+                                                </div>
+                                                <div class="content2">
+                                                    <form action="#">
+                                                        <ul>
+                                                            <li>
+                                                                <label class="check-box" for="check6">
+                                                                    <input type="checkbox" name="checkbox-all" id="check6" value="page-chk">pages1
+                                                                </label>
+                                                                <ul>
+                                                                    <li>
+                                                                        <label class="check-box" for="check-child">
+                                                                            <input type="checkbox" name="checkbox-all" id="check-child" value="page-chk">pages1
+                                                                        </label>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <label class="check-box" for="check7">
+                                                                    <input type="checkbox" name="checkbox-all" id="check7" value="page-chk">pages2
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="check-box" for="check8">
+                                                                    <input type="checkbox" name="checkbox-all" id="check8" value="page-chk">pages3
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="check-box" for="check9">
+                                                                    <input type="checkbox" name="checkbox-all" id="check9" value="page-chk">pages4
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="check-box" for="check10">
+                                                                    <input type="checkbox" name="checkbox-all" id="check10" value="page-chk">pages5
+                                                                </label>
+                                                            </li>
+                                                        </ul>
+                                                    </form>
+                                                </div>
+                                                <div class="content3">
+                                                    <form action="#" class="form-inline">
+                                                        <label class="search-box" for="search1">
+                                                            <input type="text" name="search-box" id="search1" value="">
+                                                        </label>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="select-all clearfix">
+                                        <a href="#">Select All</a>
+                                        <button class="btn btn-danger btn-default">Add to Menu</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="add-menu">
+                                    <a href="#">Pages <span class="glyphicon glyphicon-chevron-down"></span></a>
+                                </h3>
+                                <div class="ans">
+                                    <div class="add-menu-list">
+                                        <div class="tab">
+                                            <nav>
+                                                <ul>
+                                                    <li data-content=".content1">Most Recent</li>
+                                                    <li data-content=".content2">View All</li>
+                                                    <li data-content=".content3">Search</li>
+                                                </ul>
+                                            </nav>
+                                            <div class="content">
+                                                <div class="content1">
+                                                    <form action="#">
+                                                        <ul>
+                                                            <li>
+                                                                <label class="check-box" for="check">
+                                                                    <input type="checkbox" name="checkbox-all" id="check" value="page-chk">pages1
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="check-box" for="check">
+                                                                    <input type="checkbox" name="checkbox-all" id="check" value="page-chk">pages2
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="check-box" for="check">
+                                                                    <input type="checkbox" name="checkbox-all" id="check" value="page-chk">pages3
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="check-box" for="check">
+                                                                    <input type="checkbox" name="checkbox-all" id="check" value="page-chk">pages4
+                                                                </label>
+                                                                <ul>
+                                                                    <li>
+                                                                        <label class="check-box" for="check-child">
+                                                                            <input type="checkbox" name="checkbox-all" id="check-child" value="page-chk">pages1
+                                                                        </label>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <label class="check-box" for="check">
+                                                                    <input type="checkbox" name="checkbox-all" id="check" value="page-chk">pages5
+                                                                </label>
+                                                            </li>
+                                                        </ul>
+                                                    </form>
+                                                </div>
+                                                <div class="content2">
+                                                    <form action="#">
+                                                        <ul>
+                                                            <li>
+                                                                <label class="check-box" for="check">
+                                                                    <input type="checkbox" name="checkbox-all" id="check" value="page-chk">pages1
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="check-box" for="check">
+                                                                    <input type="checkbox" name="checkbox-all" id="check" value="page-chk">pages2
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="check-box" for="check">
+                                                                    <input type="checkbox" name="checkbox-all" id="check" value="page-chk">pages3
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="check-box" for="check">
+                                                                    <input type="checkbox" name="checkbox-all" id="check" value="page-chk">pages4
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="check-box" for="check">
+                                                                    <input type="checkbox" name="checkbox-all" id="check" value="page-chk">pages5
+                                                                </label>
+                                                                <ul>
+                                                                    <li>
+                                                                        <label class="check-box" for="check-child">
+                                                                            <input type="checkbox" name="checkbox-all" id="check-child" value="page-chk">pages1
+                                                                        </label>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </form>
+                                                </div>
+                                                <div class="content3">
+                                                    <form action="#" class="form-inline">
+                                                        <label class="search-box" for="search">
+                                                            <input type="text" name="search-box" id="search" value="">
+                                                        </label>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="select-all clearfix">
+                                        <a href="#">Select All</a>
+                                        <button class="btn btn-danger btn-default">Add to Menu</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="add-menu">
+                                    <a href="#">Pages <span class="glyphicon glyphicon-chevron-down"></span></a>
+                                </h3>
+                                <div class="ans">
+                                    <div class="add-menu-list">
+                                        <div class="tab">
+                                            <nav>
+                                                <ul>
+                                                    <li data-content=".content1">Most Recent</li>
+                                                    <li data-content=".content2">View All</li>
+                                                    <li data-content=".content3">Search</li>
+                                                </ul>
+                                            </nav>
+                                            <div class="content">
+                                                <div class="content1">
+                                                    <form action="#">
+                                                        <ul>
+                                                            <li>
+                                                                <label class="check-box" for="check">
+                                                                    <input type="checkbox" name="checkbox-all" id="check" value="page-chk">pages1
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="check-box" for="check">
+                                                                    <input type="checkbox" name="checkbox-all" id="check" value="page-chk">pages2
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="check-box" for="check">
+                                                                    <input type="checkbox" name="checkbox-all" id="check" value="page-chk">pages3
+                                                                </label>
+                                                                <ul>
+                                                                    <li>
+                                                                        <label class="check-box" for="check-child">
+                                                                            <input type="checkbox" name="checkbox-all" id="check-child" value="page-chk">pages1
+                                                                        </label>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <label class="check-box" for="check">
+                                                                    <input type="checkbox" name="checkbox-all" id="check" value="page-chk">pages4
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="check-box" for="check">
+                                                                    <input type="checkbox" name="checkbox-all" id="check" value="page-chk">pages5
+                                                                </label>
+                                                            </li>
+                                                        </ul>
+                                                    </form>
+                                                </div>
+                                                <div class="content2">
+                                                    <form action="#">
+                                                        <ul>
+                                                            <li>
+                                                                <label class="check-box" for="check">
+                                                                    <input type="checkbox" name="checkbox-all" id="check" value="page-chk">pages1
+                                                                </label>
+                                                                <ul>
+                                                                    <li>
+                                                                        <label class="check-box" for="check-child">
+                                                                            <input type="checkbox" name="checkbox-all" id="check-child" value="page-chk">pages1
+                                                                        </label>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <label class="check-box" for="check">
+                                                                    <input type="checkbox" name="checkbox-all" id="check" value="page-chk">pages2
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="check-box" for="check">
+                                                                    <input type="checkbox" name="checkbox-all" id="check" value="page-chk">pages3
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="check-box" for="check">
+                                                                    <input type="checkbox" name="checkbox-all" id="check" value="page-chk">pages4
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="check-box" for="check">
+                                                                    <input type="checkbox" name="checkbox-all" id="check" value="page-chk">pages5
+                                                                </label>
+                                                            </li>
+                                                        </ul>
+                                                    </form>
+                                                </div>
+                                                <div class="content3">
+                                                    <form action="#" class="form-inline">
+                                                        <label class="search-box" for="search">
+                                                            <input type="text" name="search-box" id="search" value="">
+                                                        </label>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="select-all clearfix">
+                                        <a href="#">Select All</a>
+                                        <button class="btn btn-danger btn-default">Add to Menu</button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="span7 rightbox">
+                        <div class="jumbotron clearfix menu-to-edit">
+                            <div class="menu-edit-box clearfix">
+                                <ul class="clearfix">
+                                    <li class="menu-name">
+                                        <span class="b_font">Menu Name</span>
+                                    </li>
+                                    <li class="menu-subject">
+                                        <form action="#" class="form-inline">
+                                            <label class="search-box" for="search2">
+                                                <input type="text" name="search-box" id="search2" value="메뉴테스트">
+                                            </label>
+                                        </form>
+                                    </li>
+                                    <li>
+                                        <button type="submit" class="btn btn-default btn-danger btn-save">Save Menu</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="menu-structure">
+                            <h3>Menu Structure</h3>
+                            <p class="desc">Drag each item into the order you prefer. Click the arrow on the right of the item to reveal additional configuration options.</p>
+                            <ul>
+                                <li>
+                                    <h3 class="add-menu2 clearfix">
+                                        <a href="#">CEO메시지</a>
+                                        <a href="#">Category <span class="glyphicon glyphicon-chevron-up"></span></a>
+                                    </h3>
+                                    <div class="ans2">
+                                        <form action="#" class="form-inline clearfix">
+                                            <p class="ans-label">Navigation Label</p>
+                                            <label for="nav-label" class="nav-label">
+                                                <input type="text" name="nav-label" id="nav-label" placeholder="CEO메시지">
+                                            </label>
+                                            <p class="move">Move <a href="#">Up one</a> <a href="#">Down one</a> <a href="#">Under</a> <a href="#">To the top</a></p>
+                                            <p class="origin">Original: <a href="#">CEO 메시지</a></p>
+                                            <div class="btn-cancel">
+                                                <a href="#">Remove</a>
+                                                <span>|</span>
+                                                <a href="#">Cancel</a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="add-menu2">
+                                        <a href="#">CEO메시지</a>
+                                        <a href="#">Category <span class="glyphicon glyphicon-chevron-down"></span></a>
+                                    </h3>
+                                    <div class="ans2">
+                                        <form action="#" class="form-inline clearfix">
+                                            <p>Navigation Label</p>
+                                            <label for="nav-label" class="nav-label">
+                                                <input type="text" name="nav-label" id="nav-label" placeholder="CEO메시지">
+                                            </label>
+                                            <p class="move">Move <a href="#">Up one</a> <a href="#">Down one</a> <a href="#">Under</a> <a href="#">To the top</a></p>
+                                            <p class="origin">Original: <a href="#">CEO 메시지</a></p>
+                                            <div class="btn-cancel">
+                                                <a href="#" class="remove">Remove</a>
+                                                <span>|</span>
+                                                <a href="#">Cancel</a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="add-menu2">
+                                        <a href="#">CEO메시지</a>
+                                        <a href="#">Category <span class="glyphicon glyphicon-chevron-down"></span></a>
+                                    </h3>
+                                    <div class="ans2">
+                                        <form action="#" class="form-inline clearfix">
+                                            <p>Navigation Label</p>
+                                            <label for="nav-label" class="nav-label">
+                                                <input type="text" name="nav-label" id="nav-label" placeholder="CEO메시지">
+                                            </label>
+                                            <p class="move">Move <a href="#">Up one</a> <a href="#">Down one</a> <a href="#">Under</a> <a href="#">To the top</a></p>
+                                            <p class="origin">Original: <a href="#">CEO 메시지</a></p>
+                                            <div class="btn-cancel">
+                                                <a href="#">Remove</a>
+                                                <span>|</span>
+                                                <a href="#">Cancel</a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="menu-settings">
+                                <h3>Menu Settings</h3>
+                                <fieldset class="menu-settings-group auto-add-pages clearfix">
+                                    <legend class="setting-topic">
+                                        Auto add pages
+                                    </legend>
+                                    <div class="menu-settings-input">
+                                        <input type="checkbox" id="add-menu-page">
+                                        <label for="add-menu-page">Automatically add new top-level pages to this menu</label>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="menu-settings-group display-location">
+                                    <legend class="setting-topic">
+                                        Display location
+                                    </legend>
+                                    <div class="menu-settings-input">
+                                        <input type="checkbox" id="location-top">
+                                        <label for="location-top">Top Menu</label>
+                                    </div>
+                                    <div class="menu-settings-input">
+                                        <input type="checkbox" id="location-social">
+                                        <label for="location-social">Social Links Menu</label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="menu-btn clearfix">
+                                <a href="#">Delete Menu</a>
+                                <button type="submit" class="btn btn-default btn-danger btn-save">Save Menu</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer">
+        <p>
+            Copyright (c) 2013 by LG Chem. All rights reserved
+        </p>
+    </div>
+</footer>
+
+<!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
